@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Test Automation for Sauce Demo ( https://www.saucedemo.com/ ) using Playwright and TypeScript",
   "scripts": {
+    "test:ci": "playwright test",
     "test": "playwright test --headed --project=\"chromium\"",
     "test-mobile": "playwright test --headed --project=\"Mobile Safari\""
   },
