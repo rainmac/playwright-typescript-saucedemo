@@ -6,6 +6,7 @@ import { CartPage } from "../../pages/CartPage";
 import { CheckoutStepOnePage } from "../../pages/CheckoutStepOnePage";
 import { CheckoutStepTwoPage } from "../../pages/CheckoutStepTwoPage";
 import { CheckoutCompletePage } from "../../pages/CheckoutCompletePage";
+import { deliveryDetails } from "../../fixtures/deliveryDetails";
 
 test("User journey", async ({ browser }) => {
     const context = await browser.newContext();
@@ -35,7 +36,7 @@ test("User journey", async ({ browser }) => {
 
     // Enter user information.  
     const checkout = new CheckoutStepOnePage(page)
-    await checkout.fillOutInformation("Reiner", "Tolentino", "4770")
+    await checkout.fillOutInformation(deliveryDetails)
     await checkout.continueCheckout()
     
     // Validate order summary totals. 

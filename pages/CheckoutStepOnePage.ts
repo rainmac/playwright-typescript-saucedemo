@@ -1,4 +1,5 @@
 import { Locator, Page } from "@playwright/test";
+import { DeliveryDetails } from "../fixtures/deliveryDetails";
 
 export class CheckoutStepOnePage {
 
@@ -16,11 +17,11 @@ export class CheckoutStepOnePage {
         this.continueButton = page.getByRole("button", { name: "Continue" })
     }
 
-    public async fillOutInformation(firstName:string, lastName:string, zipCode:string) {
+    public async fillOutInformation(deliveryDetails:DeliveryDetails) {
         await this.firstName.waitFor()
-        await this.firstName.fill(firstName)
-        await this.lastName.fill(lastName)
-        await this.zipCode.fill(zipCode)
+        await this.firstName.fill(deliveryDetails.firstName)
+        await this.lastName.fill(deliveryDetails.lastName)
+        await this.zipCode.fill(deliveryDetails.postCode)
     }
 
     public async continueCheckout() {
