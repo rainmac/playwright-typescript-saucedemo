@@ -1,4 +1,5 @@
 import { expect, Locator, Page, test } from "@playwright/test"
+import { isDesktop } from "../utilities/isDesktop"
 
 export class InventoryPage {
 
@@ -40,9 +41,16 @@ export class InventoryPage {
         await addToCartButton.click()
 
         await expect(removeButton).toBeVisible()
-        await expect(removeButton).toHaveCSS('background-color', 'rgb(255, 255, 255)');
-        await expect(removeButton).toHaveCSS('border', '0.8px solid rgb(226, 35, 26)');
-        await expect(removeButton).toHaveCSS('color', 'rgb(226, 35, 26)');
+        await expect(removeButton).toHaveCSS('background-color', 'rgb(255, 255, 255)')
+        
+        if (isDesktop(this.page)) {
+            await expect(removeButton).toHaveCSS('border', '0.8px solid rgb(226, 35, 26)')
+        }
+        else {
+            await expect(removeButton).toHaveCSS('border', '1px solid rgb(226, 35, 26)');
+        }
+        
+        await expect(removeButton).toHaveCSS('color', 'rgb(226, 35, 26)')
         await expect(addToCartButton).not.toBeVisible()
     }
 }
