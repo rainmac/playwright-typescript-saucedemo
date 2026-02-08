@@ -108,5 +108,6 @@ I choose Playwright/TypeScript for this project because of it's speed and reliab
 <br/>
 <br/>
 <br/>
+
 # The "Hybrid" Approach
 The hybrid testing approach uses APIs to handle setup steps like login and data creation, then uses UI tests to focus verifying the main user flow. Risk may include some real user actions (like the login screen or UI performance issues) may not be fully tested during this process but the reward of this approach is that it makes tests faster, more stable, and easier to maintain.

@@ -1,0 +1,27 @@
+{
+  "name": "playwright-typescript-saucedemo",
+  "version": "1.0.0",
+  "description": "Test Automation for Sauce Demo ( https://www.saucedemo.com/ ) using Playwright and TypeScript",
+  "scripts": {
+    "test": "playwright test --headed --project=\"chromium\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainmac/playwright-typescript-saucedemo.git"
+  },
+  "keywords": [],
+  "author": "Reiner Tolentino",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rainmac/playwright-typescript-saucedemo/issues"
+  },
+  "homepage": "https://github.com/rainmac/playwright-typescript-saucedemo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
