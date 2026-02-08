@@ -47,5 +47,4 @@ test("User journey", async ({ browser }) => {
 
     const checkoutCompletePage = new CheckoutCompletePage(page)
     await checkoutCompletePage.confirmOrderSuccess()
-    await page.pause()
 })
