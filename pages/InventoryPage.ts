@@ -42,14 +42,6 @@ export class InventoryPage {
 
         await expect(removeButton).toBeVisible()
         await expect(removeButton).toHaveCSS('background-color', 'rgb(255, 255, 255)')
-        
-        // if (isDesktop(this.page)) {
-        //     await expect(removeButton).toHaveCSS('border', '0.8px solid rgb(226, 35, 26)')
-        // }
-        // else {
-            await expect(removeButton).toHaveCSS('border', '1px solid rgb(226, 35, 26)');
-        // }
-        
         await expect(removeButton).toHaveCSS('color', 'rgb(226, 35, 26)')
         await expect(addToCartButton).not.toBeVisible()
     }
