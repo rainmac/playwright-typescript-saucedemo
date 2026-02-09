@@ -1,7 +1,7 @@
 {
   "name": "playwright-typescript-saucedemo",
   "version": "1.0.0",
-  "description": "Test Automation for Sauce Demo ( https://www.saucedemo.com/ ) using Playwright and TypeScript",
+  "description": "Test Automation for Sauce Demo ( https://www.saucedemo.com/ ) using Playwright and TypeScript.",
   "scripts": {
     "test:ci": "playwright test",
     "test": "playwright test --headed",
